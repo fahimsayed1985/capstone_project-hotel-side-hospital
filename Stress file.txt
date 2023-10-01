@@ -1,0 +1,13 @@
+Execute below set of commands to install stress utility:
+
+sudo su –
+amazon-linux-extras install epel -y
+yum install stress -y
+
+
+Run the given stress-ng command to generate the stress load on the instance:
+
+sudo stress --cpu 4 -v --timeout 3000s
+
+
+Initially Auto scaling group will show only one single instance but once above command is running auto scaling will create one more instance in case load gets increased on auto scaling group.
